@@ -186,7 +186,7 @@ Together, these calculations support the financial, operational, fleet, driver, 
 ## Dashboard Analysis
 
 ### 1. Customer, Revenue & Route Profitability
-![Customer, Revenue and Route Profitability Dashboard](assets/logistics-revenue-route. jpg.png)
+![Customer, Revenue and Route Profitability Dashboard](assets/logistics-revenue-route.%20jpg.png)
 
 This dashboard examines the financial performance of the logistics operation.
 
@@ -208,7 +208,7 @@ This dashboard examines the financial performance of the logistics operation.
 - Top routes by profit
 
 ### 2. Drivers Performance & Safety
-![Drivers Performance and Safety Dashboard](assets/logistics-driver-safety. jpg.png)
+![Drivers Performance and Safety Dashboard](assets/logistics-driver-safety.%20jpg.png)
 
 This dashboard examines driver-level operational performance and safety.
 
@@ -229,7 +229,7 @@ This dashboard examines driver-level operational performance and safety.
 - Comparison of driver performance metrics
 
 ### 3. Fleet, Fuel & Maintenance
-![Fleet, Fuel and Maintenance Dashboard](assets/logistics-fleet-maintenance. jpg.png)
+![Fleet, Fuel and Maintenance Dashboard](assets/logistics-fleet-maintenance.%20jpg.png)
 
 This dashboard examines fleet utilisation, fuel expenditure, maintenance costs, and vehicle performance.
 
@@ -251,7 +251,7 @@ This dashboard examines fleet utilisation, fuel expenditure, maintenance costs, 
 - Monthly fuel costs
 
 ### 4. Operations & Delivery Performance
-![Operations and Delivery Performance Dashboard](assets/logistics-operations-delivery. jpg.png)
+![Operations and Delivery Performance Dashboard](assets/logistics-operations-delivery.%20jpg.png)
 
 This dashboard examines load activity, revenue trends, trip duration, fuel consumption, and delivery-related delays.
 
