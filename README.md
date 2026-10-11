@@ -1,6 +1,6 @@
-# logistics-performance-analytics
-End-to End logistics performance analysis using SQL and Power BI.
 # End-to-End Logistics Performance Analytics
+
+An end-to-end data analytics project using SQL, Excel, Power Query, and Power BI to examine logistics financial performance, fleet efficiency, driver safety, and delivery operations.
 
 ## Project Overview
 
@@ -25,10 +25,10 @@ This project examines these areas to identify performance patterns, highlight ar
 
 ## Tools and Technologies
 
-- **SQL** — data selection, text cleaning, field transformations, and data preparation.
-- **Microsoft Excel** — working with structured data tables.
-- **Power Query** — data preparation and table-combination workflow.
-- **Power BI** — dashboard development, KPI reporting, and data visualisation.
+- **SQL** — Used to select relevant fields, clean text values, rename columns, transform categorical values, and prepare data for analysis.
+- **Microsoft Excel** — Used to work with the structured source data tables.
+- **Power Query** — Used to inspect the data, check for potential duplicates, and review data distribution.
+- **Power BI** — Used to build four interactive dashboard pages, create DAX measures, and visualise financial and operational performance metrics.
 
 ## Dataset Overview
 
@@ -53,7 +53,7 @@ The project uses 14 data tables covering different aspects of logistics operatio
 
 ## Data Preparation and SQL
 
-Data preparation was an important part of this project, as the analysis involved multiple datasets covering customers, loads, trips, routes, drivers, fleet operations, fuel purchases, maintenance, safety incidents, and delivery events.
+I prepared the logistics data for analysis using SQL, working with tables covering customers, loads, trips, routes, drivers, fleet operations, fuel purchases, maintenance, safety incidents, and delivery events. My preparation work focused on selecting relevant fields, improving field readability, cleaning text values, and preparing categorical fields for reporting.
 
 ### SQL Transformations
 
@@ -69,22 +69,24 @@ SQL was used to prepare the source tables for analysis through the following ope
 
 ### Data Inspection
 
-Power Query was used to inspect the data and check for potential data quality issues, including duplicate records and data distribution. No substantial transformations or table-combination operations were performed in Power Query.
+I used Power Query to inspect the datasets, check for potential duplicate records, and review data distribution. This step helped me examine the source data before proceeding with the analysis. I did not use Power Query for substantial data transformations or table combinations.
 
 ### Power BI
 
-The prepared data was used to develop four dashboard pages covering:
+I used Power BI to build four dashboard pages, create DAX measures, and analyse financial and operational performance across the logistics business.
 
-- Customer, revenue and route profitability
-- Driver performance and safety
-- Fleet, fuel and maintenance
-- Operations and delivery performance
+The dashboards cover:
 
-These dashboards brought financial and operational metrics together to support performance monitoring and further investigation.
+- **Customer, Revenue and Route Profitability:** Revenue, profit, profit margin, and customer revenue potential.
+- **Driver Performance and Safety:** Driver revenue, completed trips, on-time delivery rate, fuel efficiency, and safety incidents.
+- **Fleet, Fuel and Maintenance:** Fleet utilisation, fuel costs, mileage, maintenance costs, and downtime.
+- **Operations and Delivery:** Load volume, trip duration, delivery timeliness, detention time, and revenue per mile.
+
+I used KPI cards and visualisations to present performance metrics and make it easier to compare results across the different areas of the business.
 
 ## DAX Measures and Power BI Calculations
 
-DAX measures were used to calculate key financial and operational performance indicators across the logistics dataset. These calculations supported the KPI cards and analytical visuals across the four dashboard pages.
+I created DAX measures in Power BI to calculate key financial, operational, fleet, driver, and safety performance metrics. These calculations supported the KPI cards and visualisations across the four dashboard page
 
 ### Selected DAX Measures
 
@@ -156,7 +158,7 @@ DIVIDE(
 )
 ```
 
-The result depends on the records included in the `Delivery_Events` table and requires validation to ensure that the denominator represents the intended delivery events.
+This measure reports the percentage of delivery-event records marked as on time, based on the records included in the analysis.
 
 **7. Average Utilisation Rate**
 
@@ -188,7 +190,7 @@ Together, these calculations support the financial, operational, fleet, driver, 
 ### 1. Customer, Revenue & Route Profitability
 ![Customer, Revenue and Route Profitability Dashboard](assets/logistics-revenue-route.%20jpg.png)
 
-This dashboard examines the financial performance of the logistics operation.
+I developed this dashboard to analyse revenue, profitability, customer contribution, and route performance across the logistics operation.
 
 **Key performance indicators**
 - Total Revenue: $262.53M
@@ -207,10 +209,10 @@ This dashboard examines the financial performance of the logistics operation.
 - Top routes by revenue
 - Top routes by profit
 
-### 2. Drivers Performance & Safety
+### 2. Driver Performance & Safety
 ![Drivers Performance and Safety Dashboard](assets/logistics-driver-safety.%20jpg.png)
 
-This dashboard examines driver-level operational performance and safety.
+I developed this dashboard to analyse driver performance, delivery timeliness, fuel efficiency, and safety incidents across the logistics operation.
 
 **Key performance indicators**
 - Active Drivers: 124
@@ -231,7 +233,7 @@ This dashboard examines driver-level operational performance and safety.
 ### 3. Fleet, Fuel & Maintenance
 ![Fleet, Fuel and Maintenance Dashboard](assets/logistics-fleet-maintenance.%20jpg.png)
 
-This dashboard examines fleet utilisation, fuel expenditure, maintenance costs, and vehicle performance.
+I developed this dashboard to analyse fleet utilisation, fuel efficiency, fuel expenditure, maintenance costs, and vehicle downtime.
 
 **Key performance indicators**
 - Total Fleet: 120
@@ -253,7 +255,7 @@ This dashboard examines fleet utilisation, fuel expenditure, maintenance costs, 
 ### 4. Operations & Delivery Performance
 ![Operations and Delivery Performance Dashboard](assets/logistics-operations-delivery.%20jpg.png)
 
-This dashboard examines load activity, revenue trends, trip duration, fuel consumption, and delivery-related delays.
+I developed this dashboard to analyse load volumes, revenue trends, trip duration, fuel usage, and delivery delays across routes and facilities.
 
 **Key performance indicators**
 - Total Loads: 85K
@@ -271,34 +273,33 @@ This dashboard examines load activity, revenue trends, trip duration, fuel consu
 - Revenue by route
 - Detention minutes by facility city
 - Average trip duration by route
-
 ## Key Findings
 
-The Power BI dashboards provide an overview of financial performance, delivery operations, fleet efficiency, and driver safety.
+The Power BI dashboards bring together financial, delivery, fleet, and driver safety metrics to highlight areas of performance and potential operational improvement.
 
 ### 1. Revenue and Profitability
 
-The dashboard reports $262.53M in total revenue, $161.20M in calculated profit, and a 61.40% profit margin.
+The analysis reports **$262.53M in total revenue**, **$161.20M in calculated profit**, and a **61.40% profit margin**.
 
-These figures provide an overview of the financial performance captured by the model. The profit measure subtracts recorded fuel and maintenance costs from revenue, so it should be interpreted within the scope of those included costs.
+These metrics provide a view of revenue generation and profitability based on the costs included in the model. The profit measure deducts recorded fuel and maintenance costs from revenue, so the result should be interpreted within that scope.
 
 ### 2. Delivery Performance
 
-The reported on-time delivery rate is 55.67%. This metric highlights delivery timeliness as an area for further investigation. Route-level, facility-level, and delivery-event comparisons could help identify where delays are concentrated.
+The reported on-time delivery rate is **55.67%**, highlighting delivery timeliness as an area that warrants further investigation.
 
-The calculation should be validated against the intended delivery-event records before drawing firm conclusions.
+Comparing delivery events across routes and facilities can help identify where delays occur and where operational improvements may be needed.
 
 ### 3. Fleet Utilisation and Operating Costs
 
-The dashboard reports an average fleet utilisation rate of 83.04%, alongside $95.59M in fuel costs, $5.73M in maintenance costs, and 72.23K downtime hours.
+The analysis reports an average fleet utilisation rate of **83.04%**, alongside **$95.59M in fuel costs**, **$5.73M in maintenance costs**, and **72.23K downtime hours**.
 
-Together, these metrics provide a starting point for examining fleet usage, fuel expenditure, maintenance spending, and vehicle downtime.
+Viewed together, these metrics help assess fleet usage alongside fuel expenditure, maintenance spending, and vehicle downtime. Further analysis could investigate how these factors relate to fleet efficiency and operating costs.
 
 ### 4. Driver Safety
 
-The safety dashboard reports 170 safety incidents, including 64 classified as preventable.
+The safety dashboard records **170 safety incidents**, of which **64 are classified as preventable**.
 
-This provides a basis for further analysis of incident patterns and the factors associated with preventable incidents.
+These figures establish a basis for examining incident patterns and identifying drivers, routes, or operating conditions that may warrant closer investigation. Further analysis would be needed to establish the factors associated with preventable incidents.
 
 ## Recommendations
 
@@ -318,7 +319,7 @@ The dashboard metrics describe the available dataset and should be interpreted w
 
 ## Conclusion
 
-This project brings together logistics financial and operational data to examine profitability, driver performance, fleet efficiency, safety, and delivery operations. SQL supported data preparation, while Power BI provided a multi-page dashboard for reviewing key metrics and comparing performance across operational areas.
+This project involved preparing logistics data with SQL, developing DAX measures, and building four Power BI dashboard pages to analyse financial performance, driver safety, fleet efficiency, and delivery operations. The dashboards bring together key performance indicators to support comparisons across business areas and highlight opportunities for further investigation.
 
 ## Skills Demonstrated
 
@@ -332,4 +333,5 @@ This project brings together logistics financial and operational data to examine
 
 ## Project Files
 
-Project screenshots, SQL queries, and supporting files will be included in this repository as they are organised and finalised.
+- **Power BI report (.pbix):** The Power BI report containing the four dashboard pages and associated DAX measures.
+- **Dashboard screenshots:** Images of the four dashboard pages are available in the `assets` folder.
